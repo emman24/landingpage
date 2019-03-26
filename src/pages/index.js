@@ -2,19 +2,39 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Search from "../components/search"
 import SEO from "../components/seo"
+
+import Articleslists from "../components/Lists/articleslists";
+import Symptomlists from "../components/Lists/symptomslists";
+import SpecialtyLists from "../components/Lists/specialtylists";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <Search />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="eight columns">
+						<h2 style={{color:'#005a9e', padding: '15px'}}>Essentials Readings</h2>
+						<hr />
+            <Articleslists />
+          </div>
+          <div className="four columns">
+					<h2 style={{color:'#005a9e', padding: '15px'}}>Know The Symptoms</h2>
+						<hr />
+            <Symptomlists />
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="twelve columns">
+            <SpecialtyLists />
+          </div>
+        </div>
+      </div>
+
   </Layout>
 )
 

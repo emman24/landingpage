@@ -4,12 +4,19 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const SecondPage = () => (
+const SecondPage = (props) => (
   <Layout>
+		{console.log(props)}
     <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+			<div className="container">
+				<div className="row">
+					<div className="twelve column">
+					<h1>{props.location.state.articlesData.title}</h1>
+					<p>{props.location.state.articlesData.body}</p>
+					<Link to="/">Go back</Link>
+					</div>
+				</div>
+			</div>
   </Layout>
 )
 

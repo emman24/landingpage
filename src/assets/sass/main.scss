@@ -1,0 +1,21 @@
+header{
+    background-image: linear-gradient(to right, #005a9e , #78bcef);
+}
+
+.is-fullwidth {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+	.header-background { 
+		/* The image used */
+		background-image: url("https://www.masmedicalstaffing.com/wp-content/uploads/2018/02/7-types-of-leadership-styles-in-nursing-which-one-are-you.jpg");
+	
+		/* Full height */
+		height: 100%; 
+	
+		/* Center and scale the image nicely */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
